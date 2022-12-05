@@ -12,12 +12,6 @@ for line in input_data:
 
 first_max_number = max(sum_list)
 print(f"The Elf carrying the most Calories has {first_max_number} total Calories!")
-sum_list.remove(max(sum_list))
 
-second_max_number = max(sum_list)
-sum_list.remove(max(sum_list))
-
-third_max_number = max(sum_list)
-
-top_three_sum = first_max_number + second_max_number + third_max_number
-print(f"The top three Elves carrying the most Calories have a total of {top_three_sum} Calories!")
+sum_list.sort()
+print(f"The top three Elves carrying the most Calories have a total of {sum(sum_list[-3:])} Calories!")
