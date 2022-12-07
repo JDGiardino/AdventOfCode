@@ -1,25 +1,25 @@
 from string import ascii_lowercase, ascii_uppercase
 
 
-def get_dict_key(character_numbers_dictionary, character):
+def get_dict_key(character_numbers_dictionary: dict[int, str], character: str) -> int:
     for key, value in character_numbers_dictionary.items():
         if character == value:
             return key
 
 
-def same_character_in_string(string1, string2):
+def same_character_in_string(string1: str, string2: str) -> str:
     for character in string1:
         if character in string2:
             return character
 
 
-def string_into_two(string):
+def string_into_two(string: str) -> tuple[str, str]:
     string1 = string[:len(string) // 2]
     string2 = string[len(string) // 2:]
     return string1, string2
 
 
-def character_numbers():
+def character_numbers() -> dict[int, str]:
     character_numbers_dictionary = {}
     number = 1
     all_characters = ascii_lowercase + ascii_uppercase  # These are special strings that include every character
